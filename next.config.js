@@ -1,16 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: "export",  // 让 Next.js 生成静态 HTML
+    transpilePackages: ['antd-mobile'],
+    output: "export",  // 让 Next.js 生成静态 HTML 文件
     images: {
-      unoptimized: true,  // 解决 AWS Amplify 不支持 Image Optimization
-    },
-  };
-  
-  module.exports = {
-    basePath: '/demo', // If your app is hosted under a subpath
-    trailingSlash: true, // Ensure trailing slashes are handled correctly
-    images: {
-      unoptimized: true, // Disable image optimization if using `next export`
-    },
-  };
+      unoptimized: true,  // 解决 Amplify 不支持 Image Optimization 问题
+    },}
+
+  module.exports = nextConfig;
   
