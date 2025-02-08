@@ -6,7 +6,11 @@ const nextConfig = {
     },
   };
   
-module.exports = {
-    basePath: '/demo',
+  module.exports = {
+    basePath: '/demo', // If your app is hosted under a subpath
+    trailingSlash: true, // Ensure trailing slashes are handled correctly
+    images: {
+      unoptimized: true, // Disable image optimization if using `next export`
+    },
   };
   
